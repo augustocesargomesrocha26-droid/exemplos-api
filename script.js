@@ -24,7 +24,7 @@ const fetchTradutor = async (texto) => {
 
 const mostrarQuestoes = async () => {
     const container = document.querySelector('#question-container');
-    const questions = await fetchTrivia();
+    const questions = await fetchTrivia("&category=15&type=multiple", 10);
     let acertos = 0;
     
     for (const question of questions){
