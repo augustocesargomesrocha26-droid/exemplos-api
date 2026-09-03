@@ -52,16 +52,17 @@ const mostrarQuestoes = async (qtd=5) => {
             botoesResposta.forEach((botao) => {
                 botao.onclick = () => {
                     if (botao.innerText == respostaTraduzida){
-                        botao.style.backgroundColor = 'green';
+                        botao.classList.add("correta");
                         acertos++;
                     } else {
-                        botao.style.backgroundColor = 'red';
-                        botoesResposta.forEach((bt) => {
-                            if (bt.innerText == respostaTraduzida){
-                                bt.style.backgroundColor = 'green';
-                            }
-                        });
+                        botao.classList.add("errada");
                     }
+                    botoesResposta.forEach((bt) => {
+                        if (bt.innerText == respostaTraduzida){
+                            bt.classList.add("correta");
+                        }
+                        bt.disabled = true;
+                    });
                     setTimeout(() => {
                         resolve();
                     }, 1000)
