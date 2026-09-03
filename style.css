@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .card {
@@ -110,4 +110,65 @@ body {
 #question-container button:disabled {
     cursor: not-allowed;
     opacity: 0.9;
+}
+
+/* Tablets e telas menores */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .card {
+        padding: 30px 25px;
+    }
+
+    .card h1 {
+        font-size: 28px;
+    }
+
+    #question-container {
+        font-size: 18px;
+    }
+
+    #question-container button {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+
+/* Celulares */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 15px 10px;
+    }
+
+    .card {
+        padding: 25px 18px;
+
+        border-radius: 15px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .descricao {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    #question-container {
+        font-size: 17px;
+    }
+
+    #question-container button {
+        padding: 14px 12px;
+
+        font-size: 14px;
+
+        margin-top: 10px;
+    }
 }
